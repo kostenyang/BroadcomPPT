@@ -14,17 +14,30 @@ Always read this alongside the vertical skill (semiconductor / financial / telec
 
 Two official templates exist. **Always use one of these as the base — never create from scratch.**
 
-> **⚡ 預設永遠先用 APJ 9.1 (小檔 3.8MB)**。只有在使用者明確要求「深度技術簡報」或「VCF 5.2 Master」時才改用大檔。
+> **⚡ 預設永遠先用最小的白底範本**。只有在使用者明確要求時才改用其他範本。
 
 | 優先順序 | Template | File | Size | When to use |
 |---------|----------|------|------|-------------|
-| ✅ **預設 (Default)** | APJ Upgrade Pathways to VCF 9.1 | `APJ__Tech__Upgrade_Pathways_to_VCF_9_1-Slides.pptx` | 3.8MB | **所有情境的預設底版** |
+| ✅ **預設 (Default)** | VCF 9.1 Getting Started | `Getting_Started_with_VCF_9_1__Upgrade_Paths__and_What_to_Expect.pptx` | 2.4MB | **所有情境的預設底版** — 白底、輕量 |
+| 🔁 備用 | APJ Upgrade Pathways to VCF 9.1 | `APJ__Tech__Upgrade_Pathways_to_VCF_9_1-Slides.pptx` | 3.8MB | 升級路徑詳細場景 |
 | 🔁 備用 (On request only) | VCF 5.2 Master Technical | `VCF_5_2_Master_Technical_-_BC04.pptx` | 97MB | 僅當使用者明確指定時 |
 
 Download from GitHub (預設):
-`https://raw.githubusercontent.com/kostenyang/BroadcomPPT/main/APJ__Tech__Upgrade_Pathways_to_VCF_9_1-Slides.pptx`
+`https://raw.githubusercontent.com/kostenyang/BroadcomPPT/main/Getting_Started_with_VCF_9_1__Upgrade_Paths__and_What_to_Expect.pptx`
 
 Or use uploaded file directly from `/mnt/user-data/uploads/` if available in session.
+
+---
+
+## Background Color Rule
+
+**白底 (White Background) 為所有投影片的預設底色。**
+
+- Content slides: 白底 `#FFFFFF` + 深色文字 `#000000` / `#1B1E35`
+- Section headers: 可用品牌色 (Teal `#007A86` / Navy `#1B1E35`) 作深色背景
+- Title slide & closing: 可用深色背景增加視覺層次
+- **不得使用米色、米黃、淺橘等暖色背景** (`#FAF0E6`, `#FFF8E1`, `#F5F5DC` 等)
+- 圖表、diagram 區塊：白底或極淺灰 `#F2F2F2`
 
 ---
 

@@ -8,8 +8,9 @@ description: Create Broadcom VCF presentation decks for semiconductor / IC desig
 Read `broadcom-ppt-base` SKILL.md first for template specs, colors, fonts, and editing workflow.
 Location: `/home/claude/broadcom-ppt-skills/broadcom-ppt-base/SKILL.md`
 
-> **⚡ 預設底版**：永遠使用 `APJ__Tech__Upgrade_Pathways_to_VCF_9_1-Slides.pptx` (3.8MB)。  
-> 只有使用者明確說「用 5.2 Master」時才改用大檔。
+> **⚡ 預設底版**：永遠使用 `Getting_Started_with_VCF_9_1__Upgrade_Paths__and_What_to_Expect.pptx` (2.4MB，白底)。  
+> APJ 9.1 (3.8MB) 為第二選擇；只有使用者明確說「用 5.2 Master」時才改用大檔。  
+> **所有 content slides 以白底 (#FFFFFF) 為主。**
 
 ---
 
