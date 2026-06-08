@@ -10,6 +10,12 @@
 - `APJ__Tech__Upgrade_Pathways_to_VCF_9_1-Slides.pptx` — VCF 9.1 升級路徑範本
 - `VCF_Edge_Customer_Presentation.pptx` — VCF Edge 9.1 客戶簡報範本 (42 slides)
 
+### 來源簡報 (Source Decks，下列 skill 以其為底版)
+
+- `BOT - 原廠專業技術支援服務團隊與客戶成功案例分享_20241022_V9.0.pptx` — Broadcom CXS 原廠團隊與客戶成功案例 (27 slides)
+- `VCF9 - EBC and Customer Deck.pptx` — VCF 9 EBC / 客戶高階簡報 (52 slides)
+- `VMware Cloud Foundation - VCF9 - Summary_Final.pptx` — VCF 9 概覽摘要 (24 slides)
+
 ## Skill 套件
 
 | Skill | 說明 | 適用情境 |
@@ -21,6 +27,9 @@
 | `vcf-hybrid-cloud` | 混合雲/多站點 | GCVE、HCX、內雲/外雲/公雲 |
 | `vcf-ai` | AI 基礎架構 | Private AI、GPU、VKS、GenAI |
 | `vcf-edge` | 邊緣運算 | VCF Edge、零售門市、工廠、ZTP、邊緣 AI、上千站點 |
+| `cxs-success-stories` | 原廠服務團隊/客戶案例 | CXS 團隊介紹、公股金融業成功案例、PSO/顧問服務、數位韌性 |
+| `vcf9-ebc-deck` | VCF 9 EBC 高階簡報 | CIO/V-level pitch、私有雲價值、PCMO、Advanced Services |
+| `vcf9-summary` | VCF 9 概覽摘要 | 快速 overview、產品摘要、30 分鐘介紹版 |
 
 ## 目錄結構
 
@@ -32,14 +41,22 @@ BroadcomPPT/
 │   ├── vcf-financial/
 │   ├── vcf-telecom/
 │   ├── vcf-hybrid-cloud/
-│   └── vcf-ai/
+│   ├── vcf-ai/
+│   ├── vcf-edge/
+│   ├── cxs-success-stories/
+│   ├── vcf9-ebc-deck/
+│   └── vcf9-summary/
 └── skills-pkg/          # 打包好的 .skill 安裝檔
     ├── broadcom-ppt-base.skill
     ├── vcf-semiconductor.skill
     ├── vcf-financial.skill
     ├── vcf-telecom.skill
     ├── vcf-hybrid-cloud.skill
-    └── vcf-ai.skill
+    ├── vcf-ai.skill
+    ├── vcf-edge.skill
+    ├── cxs-success-stories.skill
+    ├── vcf9-ebc-deck.skill
+    └── vcf9-summary.skill
 ```
 
 ## 使用方式
@@ -53,3 +70,6 @@ BroadcomPPT/
 - 「混合雲 GCVE + HCX 簡報」→ `vcf-hybrid-cloud`
 - 「Private AI 基礎架構簡報」→ `vcf-ai`
 - 「VCF Edge 零售門市/工廠邊緣簡報」→ `vcf-edge`
+- 「原廠技術團隊介紹 / 客戶成功案例分享」→ `cxs-success-stories`
+- 「VCF 9 EBC 高階主管簡報 / 私有雲價值 pitch」→ `vcf9-ebc-deck`
+- 「VCF 9 快速概覽 / 產品摘要」→ `vcf9-summary`
