@@ -8,6 +8,7 @@
 
 - `VCF_5_2_Master_Technical_-_BC04.pptx` — VCF 5.2 深度技術範本
 - `APJ__Tech__Upgrade_Pathways_to_VCF_9_1-Slides.pptx` — VCF 9.1 升級路徑範本
+- `VCF_Edge_Customer_Presentation.pptx` — VCF Edge 9.1 客戶簡報範本 (42 slides)
 
 ## Skill 套件
 
@@ -19,6 +20,7 @@
 | `vcf-telecom` | 電信/VCSP | CHT、OpenStack 遷移、VCD |
 | `vcf-hybrid-cloud` | 混合雲/多站點 | GCVE、HCX、內雲/外雲/公雲 |
 | `vcf-ai` | AI 基礎架構 | Private AI、GPU、VKS、GenAI |
+| `vcf-edge` | 邊緣運算 | VCF Edge、零售門市、工廠、ZTP、邊緣 AI、上千站點 |
 
 ## 目錄結構
 
@@ -50,3 +52,4 @@ BroadcomPPT/
 - 「VSMC 半導體客戶架構提案」→ `vcf-semiconductor`
 - 「混合雲 GCVE + HCX 簡報」→ `vcf-hybrid-cloud`
 - 「Private AI 基礎架構簡報」→ `vcf-ai`
+- 「VCF Edge 零售門市/工廠邊緣簡報」→ `vcf-edge`
