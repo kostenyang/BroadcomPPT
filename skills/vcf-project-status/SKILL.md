@@ -9,7 +9,7 @@ description: |
 通用的「單頁專案狀態」投影片產生器。把一個專案的狀態濃縮到 **1 頁 PPTX**，
 給專案週報 / 月報 / 治理會議 / 高管匯報使用。**不綁定特定客戶或專案**。
 
-> ⚡ 編輯前先讀 `anthropic-skills:broadcom-ppt-base` 取得 Broadcom 範本配色、字型、版面規格，
+> ⚡ 編輯前先讀 `anthropic-skills:vcf-base` 取得 Broadcom 範本配色、字型、版面規格，
 > 讓單頁狀態與其他 VCF 簡報視覺一致。實際做 / 改投影片用 `anthropic-skills:pptx` skill。
 
 ## 使用時機
@@ -38,7 +38,7 @@ description: |
 | 7 | **風險與議題 (Risks / Issues)** | 各 2–3 條，含 owner / 對策 / 嚴重度 |
 | 8 | **範圍 / 資源 / 預算 (Scope / Budget)** | 範圍變更、資源 / 人天、預算燒錄 (選填) |
 
-### RAG 燈號慣例（沿用 Broadcom 配色，詳見 broadcom-ppt-base）
+### RAG 燈號慣例（沿用 Broadcom 配色，詳見 vcf-base）
 
 | 燈號 | 意義 | 建議色 |
 |------|------|--------|
@@ -66,7 +66,7 @@ description: |
 
 ## 製作流程
 
-1. 讀 `anthropic-skills:broadcom-ppt-base` 取得配色 / 字型 / 版面規格。
+1. 讀 `anthropic-skills:vcf-base` 取得配色 / 字型 / 版面規格。
 2. 向使用者蒐集 8 區塊缺少的資料（健康度、進度 %、里程碑日期、風險 owner…），**不要自行編造數字**。
 3. 用 `anthropic-skills:pptx` skill 產生 **單張** 16:9 投影片：
    - 有底版範本 → unpack 既有 Broadcom 範本，保留一頁，填入狀態區塊。

@@ -1,11 +1,11 @@
 ---
-name: cxs-success-stories
+name: vcf-cxs
 description: Broadcom 原廠技術團隊 (Customer Success Experiences, CXS) 服務介紹與客戶成功案例簡報 skill。涵蓋 CXS 團隊組成 (30+ 位原廠服務專家)、專業服務交付方法 (需求探索→概念/邏輯/實體設計→建置→測試→知識轉移→結案)、單一窗口管家服務，以及公股/金融保險業客戶成功案例三大主軸：【智控全局】全方位即時效能監控 (戰情室電視牆、碳足跡監控、資源回收)、【擴智雲端】VCF with Tanzu 雲架構與微服務整合 (Core Banking / 壽險 / 網銀微服務轉型)、【微領全局】K8s 微服務安全合規最佳化 (RBAC、稽核日誌、漏洞修補、合規檢核)。當使用者要做原廠技術支援/CXS 團隊介紹、客戶成功案例分享、PSO/顧問服務提案、公股銀行/金融保險業導入案例、數位韌性簡報時觸發。
 ---
 
 # Broadcom CXS 原廠技術團隊與客戶成功案例 Skill
 
-先讀 `broadcom-ppt-base` SKILL.md (template specs、顏色、字體、編輯流程)。
+先讀 `vcf-base` SKILL.md (template specs、顏色、字體、編輯流程)。
 
 > **⚡ 底版**：本 skill 以原始來源檔 `BOT - 原廠專業技術支援服務團隊與客戶成功案例分享_20241022_V9.0.pptx` (27 slides) 為基礎範本。
 > 下載：`https://raw.githubusercontent.com/kostenyang/BroadcomPPT/main/BOT%20-%20原廠專業技術支援服務團隊與客戶成功案例分享_20241022_V9.0.pptx`

@@ -1,12 +1,12 @@
 ---
-name: vcf-91-ppt
+name: vcf-upgrade
 description: Create Broadcom VCF 9.1 upgrade and technical presentation decks using the official APJ Upgrade Pathways to VCF 9.1 template. Trigger whenever the user wants a presentation on VCF 9.1 upgrade paths, VCF 5.2.1 to 9.1 migration, vSphere to VCF conversion, upgrade prerequisites, IP/DNS planning, or any VCF 9.1 technical topic. Also trigger for 升級路徑, 升級規劃, upgrade scenarios, converge/import flows, or any 9.1 upgrade簡報. Always use APJ__Tech__Upgrade_Pathways_to_VCF_9_1-Slides.pptx as the base template — never create from scratch.
 ---
 
 # VCF 9.1 Presentation Skill
 
-Read `broadcom-ppt-base` SKILL.md first for general editing workflow.
-Location: `/home/claude/broadcom-ppt-skills/broadcom-ppt-base/SKILL.md`
+Read `vcf-base` SKILL.md first for general editing workflow.
+Location: `/home/claude/broadcom-ppt-skills/vcf-base/SKILL.md`
 
 > **⚡ 固定底版**：永遠使用 `APJ__Tech__Upgrade_Pathways_to_VCF_9_1-Slides.pptx` (3.8MB)。
 > **白底 content slides 為主**，section header 可用品牌深色背景。

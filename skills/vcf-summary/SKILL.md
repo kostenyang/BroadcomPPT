@@ -1,15 +1,15 @@
 ---
-name: vcf9-summary
-description: VMware Cloud Foundation 9 概覽/摘要簡報 (24-slide summary) skill。精簡版 VCF 9 介紹，涵蓋「你目前的雲策略行不通」三層孤島痛點、私有雲旅程 (Best of Both Worlds：Developer-Ready / Compliant / Cost-Efficient / Secure)、Deliver the Journey 方法論 (Assess → Map Business Outcomes → Deliver)、VCF 統一平台架構 (Compute/Storage/Network + Automation & Operations)、Business Outcomes 與 VCF 9 By the Numbers (34% lower TCO、40% server consolidation、3x switching)，以及五大核心新功能 (NVMe Memory Tiering、Native VCF Multi-Tenancy、Native VPCs in vCenter、Fleet-Level Security Management、vSAN-to-vSAN Data Protection with Deep Snapshots)。當使用者要做 VCF 9 快速概覽、產品摘要、技術 overview、簡短入門/介紹簡報時觸發 (比 vcf9-ebc-deck 更精簡)。
+name: vcf-summary
+description: VMware Cloud Foundation 9 概覽/摘要簡報 (24-slide summary) skill。精簡版 VCF 9 介紹，涵蓋「你目前的雲策略行不通」三層孤島痛點、私有雲旅程 (Best of Both Worlds：Developer-Ready / Compliant / Cost-Efficient / Secure)、Deliver the Journey 方法論 (Assess → Map Business Outcomes → Deliver)、VCF 統一平台架構 (Compute/Storage/Network + Automation & Operations)、Business Outcomes 與 VCF 9 By the Numbers (34% lower TCO、40% server consolidation、3x switching)，以及五大核心新功能 (NVMe Memory Tiering、Native VCF Multi-Tenancy、Native VPCs in vCenter、Fleet-Level Security Management、vSAN-to-vSAN Data Protection with Deep Snapshots)。當使用者要做 VCF 9 快速概覽、產品摘要、技術 overview、簡短入門/介紹簡報時觸發 (比 vcf-ebc 更精簡)。
 ---
 
 # VCF 9 Summary / Overview Skill
 
-先讀 `broadcom-ppt-base` SKILL.md (template specs、顏色、字體、編輯流程)。
+先讀 `vcf-base` SKILL.md (template specs、顏色、字體、編輯流程)。
 
 > **⚡ 底版**：本 skill 以原始來源檔 `VMware Cloud Foundation - VCF9 - Summary_Final.pptx` (24 slides) 為基礎範本。
 > 下載：`https://raw.githubusercontent.com/kostenyang/BroadcomPPT/main/VMware%20Cloud%20Foundation%20-%20VCF9%20-%20Summary_Final.pptx`
-> 定位為 **General Informational** 概覽版，比 `vcf9-ebc-deck` (52 slides) 精簡。
+> 定位為 **General Informational** 概覽版，比 `vcf-ebc` (52 slides) 精簡。
 
 ---
 
@@ -70,6 +70,6 @@ VCF 9 的 **精簡摘要 / overview** 簡報，適合快速介紹、技術 overv
 ---
 
 ## 何時用哪個 VCF 9 skill
-- **快速概覽 / overview / 30 分鐘介紹** → 本 skill (`vcf9-summary`)
-- **完整 EBC / CIO pitch / 客戶價值大全** → `vcf9-ebc-deck`
-- **原廠服務團隊 + 客戶案例** → `cxs-success-stories`
+- **快速概覽 / overview / 30 分鐘介紹** → 本 skill (`vcf-summary`)
+- **完整 EBC / CIO pitch / 客戶價值大全** → `vcf-ebc`
+- **原廠服務團隊 + 客戶案例** → `vcf-cxs`

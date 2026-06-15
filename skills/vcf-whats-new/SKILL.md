@@ -5,12 +5,12 @@ description: Create Broadcom VCF "What's New" / product technical overview decks
 
 # VCF "What's New" / Tech Overview Presentation Skill
 
-Read `broadcom-ppt-base` SKILL.md first for the general editing workflow.
-Location: `/home/claude/broadcom-ppt-skills/broadcom-ppt-base/SKILL.md`
+Read `vcf-base` SKILL.md first for the general editing workflow.
+Location: `/home/claude/broadcom-ppt-skills/vcf-base/SKILL.md`
 
 > **⚡ 固定底版**：永遠使用 `TECH_TUESDAY_Whats_New_with_vSphere_in_VCF_9_1.pptx` (8.5MB)。
 > **白底 content slides 為主**；section divider 與 DEMO 頁用品牌深色 VCF 9 視覺。
-> 這是 **L200 產品功能概覽**範本（不是升級路徑範本 → 那個用 `vcf-91-ppt`）。
+> 這是 **L200 產品功能概覽**範本（不是升級路徑範本 → 那個用 `vcf-upgrade`）。
 
 Template GitHub URL:
 `https://raw.githubusercontent.com/kostenyang/BroadcomPPT/main/TECH_TUESDAY_Whats_New_with_vSphere_in_VCF_9_1.pptx`
@@ -24,7 +24,7 @@ Or from session uploads: `/mnt/user-data/uploads/TECH_TUESDAY_Whats_New_with_vSp
 | 需求 | 用哪個 skill |
 |------|-------------|
 | 產品/功能「What's New」概覽、feature 介紹、技術 enablement、DEMO session | **vcf-whats-new** (本 skill) |
-| 升級路徑、5.2.1→9.1、IP/DNS 規劃、converge/import | `vcf-91-ppt` |
+| 升級路徑、5.2.1→9.1、IP/DNS 規劃、converge/import | `vcf-upgrade` |
 | 特定客戶垂直故事 (金融/電信/半導體/AI/混合雲) | `vcf-financial` / `vcf-telecom` / `vcf-semiconductor` / `vcf-ai` / `vcf-hybrid-cloud` |
 | 單頁專案狀態報告 | `vcf-project-status` |
 

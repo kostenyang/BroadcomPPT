@@ -5,8 +5,8 @@ description: Create Broadcom VMware Cloud Foundation (VCF) Edge presentation dec
 
 # VCF Edge Presentation Skill
 
-Read `broadcom-ppt-base` SKILL.md first for template specs, colors, fonts, and editing workflow.
-Location: `/home/claude/broadcom-ppt-skills/broadcom-ppt-base/SKILL.md`
+Read `vcf-base` SKILL.md first for template specs, colors, fonts, and editing workflow.
+Location: `/home/claude/broadcom-ppt-skills/vcf-base/SKILL.md`
 
 > **⚡ 預設底版**：邊緣主題永遠先用官方 `VCF_Edge_Customer_Presentation.pptx` (42 slides, 白底, VCF Edge 9.1)。
 > 若使用者要的是純升級路徑或一般 VCF 平台主題，可改用 `Getting_Started_with_VCF_9_1__Upgrade_Paths__and_What_to_Expect.pptx`。

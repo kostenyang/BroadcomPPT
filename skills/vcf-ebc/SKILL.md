@@ -1,11 +1,11 @@
 ---
-name: vcf9-ebc-deck
+name: vcf-ebc
 description: VMware Cloud Foundation 9 EBC (Executive Briefing Center) / 客戶高階簡報製作 skill。完整 52-slide EBC 範本，涵蓋 The Value of Private Cloud、VCF 平台介紹、Modern Applications、Cost Control (52% lower TCO / 34% lower infra cost / 61% faster deploy)、PCMO (Private Cloud Modernization Program：Assess/Accelerate/Achieve + Cloud Maturity Model)、Customer Success Stories、VCF 9 核心創新 (NVMe Memory Tiering、vSAN ESA Global Dedupe、Native VPC multi-tenancy、Fleet Management、VCF Import)、Advanced Services (Private AI Foundation with NVIDIA、Live Recovery、vDefend、AVI Load Balancer、Data Services Manager)，並含 Click-Through Demo 與 Whiteboard 章節。當使用者要做 VCF 9 高階主管/CIO-level 簡報、EBC、客戶價值論述、私有雲價值 pitch、whiteboard session 時觸發。
 ---
 
 # VCF 9 EBC / Customer Deck Skill
 
-先讀 `broadcom-ppt-base` SKILL.md (template specs、顏色、字體、編輯流程)。
+先讀 `vcf-base` SKILL.md (template specs、顏色、字體、編輯流程)。
 
 > **⚡ 底版**：本 skill 以原始來源檔 `VCF9 - EBC and Customer Deck.pptx` (52 slides) 為基礎範本。
 > 下載：`https://raw.githubusercontent.com/kostenyang/BroadcomPPT/main/VCF9%20-%20EBC%20and%20Customer%20Deck.pptx`
@@ -93,5 +93,5 @@ VCF 9 的 **Executive Briefing Center (EBC)** 主力簡報，聽眾為 **CIO / V
 ## 簡報語氣 (給高階主管)
 - 開場用 IDC/Forrester 數字點出「silo 成本高 + 公雲不夠主權」雙痛點
 - 主軸落在 business outcome (TCO / agility / sovereignty)，技術細節留 deep dive
-- Customer Success 章節務必客製成在地案例 (可搭配 `cxs-success-stories`)
+- Customer Success 章節務必客製成在地案例 (可搭配 `vcf-cxs`)
 - 收尾導向 PCMO 與 Whiteboard Session 作為下一步

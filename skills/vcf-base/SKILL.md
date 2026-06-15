@@ -1,5 +1,5 @@
 ---
-name: broadcom-ppt-base
+name: vcf-base
 description: Core Broadcom/VMware by Broadcom PowerPoint template knowledge. Use this as a shared reference for all VCF presentation skills. Contains template specs, slide layouts, color system, font rules, and upgrade path conventions for VCF 5.2 and VCF 9.1 templates.
 ---
 
