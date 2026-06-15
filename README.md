@@ -32,6 +32,7 @@
 | `vcf9-ebc-deck` | VCF 9 EBC 高階簡報 | CIO/V-level pitch、私有雲價值、PCMO、Advanced Services |
 | `vcf9-summary` | VCF 9 概覽摘要 | 快速 overview、產品摘要、30 分鐘介紹版 |
 | `vcf-whats-new` | VCF「What's New」/ 技術概覽 (L200) | 新功能介紹、Tech Tuesday、feature deep-dive、DEMO session |
+| `vcf-project-status` | 單頁專案狀態報告 (1-page) | 週報/月報、治理會議、RAG 狀態、高管進度單頁 |
 
 ## 目錄結構
 
@@ -48,7 +49,8 @@ BroadcomPPT/
 │   ├── cxs-success-stories/
 │   ├── vcf9-ebc-deck/
 │   ├── vcf9-summary/
-│   └── vcf-whats-new/
+│   ├── vcf-whats-new/
+│   └── vcf-project-status/
 └── skills-pkg/          # 打包好的 .skill 安裝檔
     ├── broadcom-ppt-base.skill
     ├── vcf-semiconductor.skill
@@ -60,7 +62,8 @@ BroadcomPPT/
     ├── cxs-success-stories.skill
     ├── vcf9-ebc-deck.skill
     ├── vcf9-summary.skill
-    └── vcf-whats-new.skill
+    ├── vcf-whats-new.skill
+    └── vcf-project-status.skill
 ```
 
 ## 使用方式
@@ -78,3 +81,4 @@ BroadcomPPT/
 - 「VCF 9 EBC 高階主管簡報 / 私有雲價值 pitch」→ `vcf9-ebc-deck`
 - 「VCF 9 快速概覽 / 產品摘要」→ `vcf9-summary`
 - 「VCF 9 What's New / 新功能介紹 / Tech Tuesday」→ `vcf-whats-new`
+- 「專案一頁狀態報告 / 週報月報投影片 / RAG status」→ `vcf-project-status`
