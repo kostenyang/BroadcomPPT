@@ -15,6 +15,7 @@
 - `BOT - 原廠專業技術支援服務團隊與客戶成功案例分享_20241022_V9.0.pptx` — Broadcom CXS 原廠團隊與客戶成功案例 (27 slides)
 - `VCF9 - EBC and Customer Deck.pptx` — VCF 9 EBC / 客戶高階簡報 (52 slides)
 - `VMware Cloud Foundation - VCF9 - Summary_Final.pptx` — VCF 9 概覽摘要 (24 slides)
+- `TECH_TUESDAY_Whats_New_with_vSphere_in_VCF_9_1.pptx` — VCF 9.1 vSphere「What's New」Tech Tuesday 範本 (29 slides)
 
 ## Skill 套件
 
@@ -30,6 +31,7 @@
 | `cxs-success-stories` | 原廠服務團隊/客戶案例 | CXS 團隊介紹、公股金融業成功案例、PSO/顧問服務、數位韌性 |
 | `vcf9-ebc-deck` | VCF 9 EBC 高階簡報 | CIO/V-level pitch、私有雲價值、PCMO、Advanced Services |
 | `vcf9-summary` | VCF 9 概覽摘要 | 快速 overview、產品摘要、30 分鐘介紹版 |
+| `vcf-whats-new` | VCF「What's New」/ 技術概覽 (L200) | 新功能介紹、Tech Tuesday、feature deep-dive、DEMO session |
 
 ## 目錄結構
 
@@ -45,7 +47,8 @@ BroadcomPPT/
 │   ├── vcf-edge/
 │   ├── cxs-success-stories/
 │   ├── vcf9-ebc-deck/
-│   └── vcf9-summary/
+│   ├── vcf9-summary/
+│   └── vcf-whats-new/
 └── skills-pkg/          # 打包好的 .skill 安裝檔
     ├── broadcom-ppt-base.skill
     ├── vcf-semiconductor.skill
@@ -56,7 +59,8 @@ BroadcomPPT/
     ├── vcf-edge.skill
     ├── cxs-success-stories.skill
     ├── vcf9-ebc-deck.skill
-    └── vcf9-summary.skill
+    ├── vcf9-summary.skill
+    └── vcf-whats-new.skill
 ```
 
 ## 使用方式
@@ -73,3 +77,4 @@ BroadcomPPT/
 - 「原廠技術團隊介紹 / 客戶成功案例分享」→ `cxs-success-stories`
 - 「VCF 9 EBC 高階主管簡報 / 私有雲價值 pitch」→ `vcf9-ebc-deck`
 - 「VCF 9 快速概覽 / 產品摘要」→ `vcf9-summary`
+- 「VCF 9 What's New / 新功能介紹 / Tech Tuesday」→ `vcf-whats-new`
