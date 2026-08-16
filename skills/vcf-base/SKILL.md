@@ -284,6 +284,13 @@ For Taiwan customer-facing decks:
 
 ## Editing Workflow
 
+> **首選做法：複製整頁換字，不要從空白頁重畫。**
+> 一張官方內容頁的 XML 約 293,000 字元、純文字只有約 950 字元 —— 差 310 倍。
+> 複製整頁 = 用 1/300 的成本拿到 100% 的官方美術（配色、對齊、圖形、陰影全在）。
+> 用 `scripts/clone-slide.py`（`list` / `clone` / `settext` / `keep`），
+> 版型查 `skills/vcf-whats-new/references/layout-map.md`，不要開檔掃 layout。
+> 下面的 unpack/pack 流程只在 clone-slide 做不到的情況才用（例如要動 master 或圖形本身）。
+
 1. Copy the template to `/home/claude/` — never edit the original
 2. Unpack: `python3 /mnt/skills/public/pptx/scripts/office/unpack.py template.pptx unpacked/`
 3. Add/edit slides by manipulating XML in `unpacked/ppt/slides/`

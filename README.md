@@ -35,6 +35,14 @@
 | `vcf-whats-new` | VCF「What's New」/ 技術概覽 (L200–L300) | 新功能介紹、Tech Tuesday、feature deep-dive、DEMO session、vSAN/儲存新功能 |
 | `vcf-project-status` | 單頁專案狀態報告 (1-page) | 週報/月報、治理會議、RAG 狀態、高管進度單頁 |
 
+## 工具
+
+| 檔案 | 用途 |
+|------|------|
+| `scripts/clone-slide.py` | 從範本複製整頁、只換文字（`list` / `clone` / `settext` / `keep`）。一張官方內容頁 XML 約 293,000 字元、純文字只有約 950 —— 複製整頁是「照官方美術又不燒 token」的做法。 |
+| `scripts/gen-layout-map.py` | 產生版型對照表；範本換版時重跑 |
+| `skills/vcf-whats-new/references/layout-map.md` | 兩份 Tech Tuesday 範本全部 268 個版型的 名稱 → 檔案 → master → 幾何 對照 |
+
 ## 目錄結構
 
 ```
