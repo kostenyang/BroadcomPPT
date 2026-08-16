@@ -16,6 +16,7 @@
 - `VCF9 - EBC and Customer Deck.pptx` — VCF 9 EBC / 客戶高階簡報 (52 slides)
 - `VMware Cloud Foundation - VCF9 - Summary_Final.pptx` — VCF 9 概覽摘要 (24 slides)
 - `TECH_TUESDAY_Whats_New_with_vSphere_in_VCF_9_1.pptx` — VCF 9.1 vSphere「What's New」Tech Tuesday 範本 (29 slides)
+- `TECH_TUESDAY_Whats_New_with_vSAN_in_VCF_9_1.pptx` — VCF 9.1 vSAN「What's New」Tech Tuesday 範本 (30 slides，Plum 視覺、左圖右文 diagram-led，L300)
 
 ## Skill 套件
 
@@ -31,7 +32,7 @@
 | `vcf-cxs` | 原廠服務團隊/客戶案例 | CXS 團隊介紹、公股金融業成功案例、PSO/顧問服務、數位韌性 |
 | `vcf-ebc` | VCF 9 EBC 高階簡報 | CIO/V-level pitch、私有雲價值、PCMO、Advanced Services |
 | `vcf-summary` | VCF 9 概覽摘要 | 快速 overview、產品摘要、30 分鐘介紹版 |
-| `vcf-whats-new` | VCF「What's New」/ 技術概覽 (L200) | 新功能介紹、Tech Tuesday、feature deep-dive、DEMO session |
+| `vcf-whats-new` | VCF「What's New」/ 技術概覽 (L200–L300) | 新功能介紹、Tech Tuesday、feature deep-dive、DEMO session、vSAN/儲存新功能 |
 | `vcf-project-status` | 單頁專案狀態報告 (1-page) | 週報/月報、治理會議、RAG 狀態、高管進度單頁 |
 
 ## 目錄結構
