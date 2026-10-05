@@ -17,6 +17,7 @@
 - `VMware Cloud Foundation - VCF9 - Summary_Final.pptx` — VCF 9 概覽摘要 (24 slides)
 - `TECH_TUESDAY_Whats_New_with_vSphere_in_VCF_9_1.pptx` — VCF 9.1 vSphere「What's New」Tech Tuesday 範本 (29 slides)
 - `TECH_TUESDAY_Whats_New_with_vSAN_in_VCF_9_1.pptx` — VCF 9.1 vSAN「What's New」Tech Tuesday 範本 (30 slides，Plum 視覺、左圖右文 diagram-led，L300)
+- `VXD-VCF-910-PPT-v1_2-Taiwan.pptx` — VCF 9.1 Experience Day 工作坊 Master v1.2 台灣版 (144 slides，Sarah/OmniCorp 故事線 + Labs + Quiz，中文講者備註)
 
 ## Skill 套件
 
@@ -34,6 +35,7 @@
 | `vcf-summary` | VCF 9 概覽摘要 | 快速 overview、產品摘要、30 分鐘介紹版 |
 | `vcf-whats-new` | VCF「What's New」/ 技術概覽 (L200–L300) | 新功能介紹、Tech Tuesday、feature deep-dive、DEMO session、vSAN/儲存新功能 |
 | `vcf-project-status` | 單頁專案狀態報告 (1-page) | 週報/月報、治理會議、RAG 狀態、高管進度單頁 |
+| `vcf-experience-day` | VCF 9.1 Experience Day (VXD) 工作坊 | 動手實作體驗日、Lab 導向訓練、模組化半天/一天場次 |
 
 ## 工具
 
@@ -59,7 +61,8 @@ BroadcomPPT/
 │   ├── vcf-ebc/
 │   ├── vcf-summary/
 │   ├── vcf-whats-new/
-│   └── vcf-project-status/
+│   ├── vcf-project-status/
+│   └── vcf-experience-day/
 └── skills-pkg/          # 打包好的 .skill 安裝檔
     ├── vcf-base.skill
     ├── vcf-semiconductor.skill
@@ -72,7 +75,8 @@ BroadcomPPT/
     ├── vcf-ebc.skill
     ├── vcf-summary.skill
     ├── vcf-whats-new.skill
-    └── vcf-project-status.skill
+    ├── vcf-project-status.skill
+    └── vcf-experience-day.skill
 ```
 
 ## 使用方式
@@ -91,3 +95,4 @@ BroadcomPPT/
 - 「VCF 9 快速概覽 / 產品摘要」→ `vcf-summary`
 - 「VCF 9 What's New / 新功能介紹 / Tech Tuesday」→ `vcf-whats-new`
 - 「專案一頁狀態報告 / 週報月報投影片 / RAG status」→ `vcf-project-status`
+- 「VCF 9.1 Experience Day / 體驗日工作坊 / 半天 Lab 場」→ `vcf-experience-day`
