@@ -1,6 +1,6 @@
 ---
-name: vcf-experience-day
-description: Build Broadcom VCF 9.1 Experience Day (VXD) workshop decks from the official 144-slide "Master - VXD-VCF-910-PPT v1.2 Taiwan Version" template — storyline-driven (Sarah / OmniCorp) hands-on workshop with modules, labs, quiz slides and leave-behind links. Trigger whenever the user wants a VCF Experience Day, VXD, VCF 9.1 workshop, 體驗日, 動手實作工作坊, hands-on lab session deck, 客戶實作課程簡報, enablement day, lab-led training deck, or a module subset of it (VCF Installer / converge / VCF Import / VPC & Transit Gateway / VKS & Supervisor / VCF Automation / VCF Operations / Private AI Services / Key Providers & vSAN encryption) delivered as a workshop with labs and comprehension checks. Always clone slides from the bundled template — never create from scratch.
+name: "vcf-experience-day"
+description: "Build VCF 9.1 Experience Day (VXD) workshop decks from the 144-slide VXD-VCF-910 v1.2 Taiwan template — storyline, labs, quizzes; 體驗日/動手實作工作坊/Lab 場次."
 ---
 
 # VCF 9.1 Experience Day (VXD) Workshop Skill
@@ -9,7 +9,7 @@ Read `vcf-base` SKILL.md first for colors, fonts and the clone-slide workflow.
 
 > **⚡ 底版**：`VXD-VCF-910-PPT-v1_2-Taiwan.pptx`（144 slides，Leaf/Plum 主題，白底內容頁，**每頁都有講者備註，大多已有中文**）。
 > Download: `https://raw.githubusercontent.com/kostenyang/BroadcomPPT/main/VXD-VCF-910-PPT-v1_2-Taiwan.pptx`
-> 完整頁碼 → 版型對照：`references/slide-map.md`
+> 完整頁碼 → 版型對照：repo 內 `skills/vcf-experience-day/references/slide-map.md`（或 `scripts/clone-slide.py list` 重產）
 
 **Guardrail**：產出任何簡報前，先問「這次範圍是否包含 NSX Edge cluster（Edge nodes / T0-T1 gateway）」；確認後才動手。（VPC 模組的 Centralized Transit Gateway 那頁就靠 Edge，答案會決定 slide 61 保留或改講 DTGW-only。）
 

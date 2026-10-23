@@ -1,0 +1,24 @@
+{
+  "title": "玉山 VCF9 升級轉移專案",
+  "project_start": "2026-01-20",
+  "tasks": [
+    {"wbs": "1.1", "task": "專案啟動會議", "phase": "1 專案啟動與規劃", "owner": "動安 + Broadcom CXS", "start": "2026-01-20", "end": "2026-02-15", "percent": 1.0, "notes": ""},
+    {"wbs": "1.2", "task": "範疇與時程規劃", "phase": "1 專案啟動與規劃", "owner": "動安 + Broadcom CXS", "start": "2026-01-20", "end": "2026-02-15", "percent": 1.0, "notes": ""},
+    {"wbs": "1.3", "task": "角色與權責確認", "phase": "1 專案啟動與規劃", "owner": "玉山專案窗口", "start": "2026-01-20", "end": "2026-02-15", "percent": 1.0, "notes": ""},
+    {"wbs": "2.1", "task": "VCF5 現況盤點", "phase": "2 現況盤點與前置作業", "owner": "動安 + Broadcom CXS", "start": "2026-02-16", "end": "2026-03-31", "percent": 0.7, "notes": ""},
+    {"wbs": "2.2", "task": "相容性與升級路徑確認", "phase": "2 現況盤點與前置作業", "owner": "動安 + Broadcom CXS", "start": "2026-02-16", "end": "2026-03-31", "percent": 0.5, "notes": "KB 389276 / 316072"},
+    {"wbs": "2.3", "task": "備份與回復方案", "phase": "2 現況盤點與前置作業", "owner": "動安 + Broadcom CXS", "start": "2026-02-16", "end": "2026-03-31", "percent": 0.3, "notes": "vROps dashboard supermetric"},
+    {"wbs": "3.1", "task": "升級模擬與演練", "phase": "3 管理 Domain 升級", "owner": "動安 + Broadcom CXS", "start": "2026-04-01", "end": "2026-04-30", "percent": 0.0, "notes": ""},
+    {"wbs": "3.2", "task": "管理 Domain 元件升級", "phase": "3 管理 Domain 升級", "owner": "動安 + Broadcom CXS", "start": "2026-04-01", "end": "2026-04-30", "percent": 0.0, "notes": "VCF Ops → NSX → vCenter → ESXi"},
+    {"wbs": "3.3", "task": "管理 Domain 升級驗證", "phase": "3 管理 Domain 升級", "owner": "動安 + Broadcom CXS", "start": "2026-05-01", "end": "2026-05-15", "percent": 0.0, "notes": ""},
+    {"wbs": "4.1", "task": "Workload Domain 升級規劃", "phase": "4 Workload Domain 升級", "owner": "動安 + Broadcom CXS", "start": "2026-05-01", "end": "2026-06-30", "percent": 0.0, "notes": "vLCM Image mode 前置"},
+    {"wbs": "4.2", "task": "Workload Domain 元件升級", "phase": "4 Workload Domain 升級", "owner": "動安 + Broadcom CXS", "start": "2026-05-01", "end": "2026-06-30", "percent": 0.0, "notes": ""},
+    {"wbs": "5.1", "task": "HCX 架構與設計", "phase": "5 HCX 部署與 ESB 搬遷", "owner": "動安 + Broadcom CXS", "start": "2026-07-01", "end": "2026-07-31", "percent": 0.0, "notes": ""},
+    {"wbs": "5.2", "task": "HCX 安裝與設定", "phase": "5 HCX 部署與 ESB 搬遷", "owner": "動安 + Broadcom CXS", "start": "2026-08-01", "end": "2026-09-15", "percent": 0.0, "notes": ""},
+    {"wbs": "5.3", "task": "ESB 正式遷移至 VCF9", "phase": "5 HCX 部署與 ESB 搬遷", "owner": "動安 + 玉山應用團隊", "start": "2026-09-01", "end": "2026-10-30", "percent": 0.0, "notes": ""},
+    {"wbs": "6.1", "task": "系統功能驗證", "phase": "6 功能驗證與穩定度觀察", "owner": "玉山應用團隊", "start": "2026-09-16", "end": "2026-11-15", "percent": 0.0, "notes": ""},
+    {"wbs": "6.2", "task": "效能與穩定度觀察", "phase": "6 功能驗證與穩定度觀察", "owner": "玉山專案窗口", "start": "2026-09-16", "end": "2026-11-15", "percent": 0.0, "notes": ""},
+    {"wbs": "7.1", "task": "文件與配置更新", "phase": "7 文件更新與移交", "owner": "動安 + Broadcom CXS", "start": "2026-11-16", "end": "2026-12-31", "percent": 0.0, "notes": ""},
+    {"wbs": "7.2", "task": "移交與教育訓練", "phase": "7 文件更新與移交", "owner": "動安 + Broadcom CXS", "start": "2026-11-16", "end": "2026-12-31", "percent": 0.0, "notes": ""}
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "VCF 9.1 估人天公版（4 種建置 / 升級情境，單一單位基準）",
+  "sheet_name": "WBS估算",
+  "phases": [
+    {"wbs": "1", "name": "安裝管理網域（Greenfield Management Domain）", "tasks": [
+      {"wbs": "1.1", "task": "規劃與設計（HLD/LLD、IP/DNS/憑證/VLAN、BOM）", "manday": 3, "notes": ""},
+      {"wbs": "1.2", "task": "實體 / 網路就緒確認", "manday": 1, "notes": "客戶側機房/網路配合"},
+      {"wbs": "1.3", "task": "ESXi 安裝與基礎設定", "manday": 2, "notes": ""},
+      {"wbs": "1.4", "task": "vSAN ESA Cluster 設定", "manday": 2, "notes": ""},
+      {"wbs": "1.5", "task": "NSX 部署（管理網域）", "manday": 2, "notes": ""},
+      {"wbs": "1.6", "task": "Cloud Builder / SDDC Bring-up（vCenter、SDDC Manager、VCF Operations）", "manday": 3, "notes": ""},
+      {"wbs": "1.7", "task": "管理網域部署驗證", "manday": 1, "notes": ""}
+    ]},
+    {"wbs": "2", "name": "安裝工作負載網域（Greenfield Workload Domain）", "tasks": [
+      {"wbs": "2.1", "task": "規劃與設計（資源、網路、儲存）", "manday": 2, "notes": "管理網域須已就緒"},
+      {"wbs": "2.2", "task": "主機就緒與 ESXi 設定", "manday": 2, "notes": ""},
+      {"wbs": "2.3", "task": "建立 Workload Domain（vCenter、Cluster）", "manday": 2, "notes": ""},
+      {"wbs": "2.4", "task": "vSAN / 儲存設定", "manday": 1, "notes": ""},
+      {"wbs": "2.5", "task": "NSX 設定（視需求）", "manday": 2, "notes": ""},
+      {"wbs": "2.6", "task": "驗證與納管", "manday": 1, "notes": ""}
+    ]},
+    {"wbs": "3", "name": "原地升級轉換為管理網域（In-place Upgrade → Management Domain）", "tasks": [
+      {"wbs": "3.1", "task": "既有環境盤點與相容性確認", "manday": 2, "notes": "硬體 BCG / vSAN / NSX 版本"},
+      {"wbs": "3.2", "task": "轉換前置（憑證 / 網路 / 儲存 / vLCM Image 就緒）", "manday": 2, "notes": "vLCM Image mode 為 9.1 前置"},
+      {"wbs": "3.3", "task": "既有叢集轉換 / Converge 為 VCF 管理網域", "manday": 4, "notes": "first-of-type，最複雜"},
+      {"wbs": "3.4", "task": "部署 / 補齊管理元件（SDDC Manager / VCF Operations / NSX）", "manday": 3, "notes": ""},
+      {"wbs": "3.5", "task": "原地升級至 VCF 9.1（元件依序）", "manday": 3, "notes": "VCF Ops→NSX→vCenter→ESXi"},
+      {"wbs": "3.6", "task": "ESXi 主機 remediation", "manday": 2, "notes": "依主機數 / 變更窗口縮放"},
+      {"wbs": "3.7", "task": "管理網域驗證與基線確認", "manday": 2, "notes": ""}
+    ]},
+    {"wbs": "4", "name": "匯入工作負載網域（Import Workload Domain → 9.1）", "tasks": [
+      {"wbs": "4.1", "task": "既有環境盤點與相容性確認", "manday": 2, "notes": ""},
+      {"wbs": "4.2", "task": "匯入前置（憑證 / 網路 / 儲存 / vLCM Image 就緒）", "manday": 2, "notes": ""},
+      {"wbs": "4.3", "task": "匯入為 Workload Domain（VCF 9 Import 流程）", "manday": 2, "notes": ""},
+      {"wbs": "4.4", "task": "升級至 VCF 9.1（元件依序）", "manday": 2, "notes": ""},
+      {"wbs": "4.5", "task": "ESXi 主機 remediation", "manday": 2, "notes": "依主機數 / 變更窗口縮放"},
+      {"wbs": "4.6", "task": "升級後驗證與納管", "manday": 2, "notes": ""}
+    ]}
+  ]
+}

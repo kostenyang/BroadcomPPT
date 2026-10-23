@@ -1,0 +1,59 @@
+{
+  "sheets": [
+    {
+      "sheet_name": "VCF→VCF 9.1",
+      "title": "VCF → VCF 9.1 升級公版（既有 VCF 納管環境）",
+      "phases": [
+        {"wbs": "1", "name": "升級前置與規劃", "tasks": [
+          {"wbs": "1.1", "task": "既有 VCF 環境盤點、相容性與來源版本確認", "manday": 2, "notes": "9.0.x 可直升；5.2.x 需序列 / 跳版；確認 ELM 限制"},
+          {"wbs": "1.2", "task": "VCF Management Services IP 規劃（最少 12、上限 30）與 License Server 衝突檢查", "manday": 1, "notes": "License Server 內部 172.17.0.0/16，勿與管理網段重疊"},
+          {"wbs": "1.3", "task": "Depot 設定、下載 token 與 binaries 下載（線上 / 離線 depot）", "manday": 1, "notes": ""},
+          {"wbs": "1.4", "task": "備份回復、變更窗口與升級演練規劃", "manday": 2, "notes": "vLCM Image mode 為前置"}
+        ]},
+        {"wbs": "2", "name": "Fleet 與管理層升級（強制）", "tasks": [
+          {"wbs": "2.1", "task": "升級第一個 VCF Instance 的 VCF Operations（Fleet 升級起點）", "manday": 3, "notes": "轉換至 VCF Management Services、自動部署 License Server、停用舊 Fleet Mgmt Appliance"},
+          {"wbs": "2.2", "task": "其餘 Fleet 層管理元件依官方順序升級至 9.1", "manday": 2, "notes": "Fleet Lifecycle / SDDC Lifecycle"},
+          {"wbs": "2.3", "task": "VCF Automation / Aria（若有部署）升級", "manday": 2, "notes": "可獨立 workstream，自訂工作流另計"}
+        ]},
+        {"wbs": "3", "name": "管理網域升級（強制）", "tasks": [
+          {"wbs": "3.1", "task": "管理網域元件依序升級（NSX→vCenter→ESXi）", "manday": 3, "notes": ""},
+          {"wbs": "3.2", "task": "管理網域 ESXi 主機 remediation", "manday": 1, "notes": "依主機數 / 變更窗口縮放"},
+          {"wbs": "3.3", "task": "管理網域升級驗證與基線", "manday": 1, "notes": ""}
+        ]},
+        {"wbs": "4", "name": "Workload Domain 升級（Day-N，選用）", "tasks": [
+          {"wbs": "4.1", "task": "Workload Domain 升級規劃", "manday": 1, "notes": "非強制，可後續 Day-N 執行"},
+          {"wbs": "4.2", "task": "Workload Domain 元件依序升級至 9.1", "manday": 2, "notes": "每增一個 WLD 約 +2~3"},
+          {"wbs": "4.3", "task": "Workload Domain ESXi 主機 remediation", "manday": 1, "notes": "依主機數 / 變更窗口縮放"},
+          {"wbs": "4.4", "task": "升級後驗證與納管", "manday": 1, "notes": ""}
+        ]}
+      ]
+    },
+    {
+      "sheet_name": "vSphere8→VCF 9.1",
+      "title": "vSphere 8 → VCF 9.1 公版（Converge / Import）",
+      "phases": [
+        {"wbs": "1", "name": "評估與情境選擇", "tasks": [
+          {"wbs": "1.1", "task": "既有 vSphere 8 環境盤點與硬體相容性（Host BCG）確認", "manday": 2, "notes": "最關鍵前置；多數失敗源自硬體 / 前置未過"},
+          {"wbs": "1.2", "task": "選擇 Converge 情境 + 填寫 Planning & Preparation Workbook", "manday": 2, "notes": "Convert 成新 VCF（既有 vSphere 變管理網域）/ Import 成既有 Fleet 的 VI Workload Domain"},
+          {"wbs": "1.3", "task": "IP / 網路 / 憑證 / vLCM Image mode 前置", "manday": 2, "notes": ""}
+        ]},
+        {"wbs": "2", "name": "既有元件前置升級（Converge 前手動）", "tasks": [
+          {"wbs": "2.1", "task": "vCenter 升至支援版本（如需）", "manday": 2, "notes": "8.0U3+ 且 NSX 4.2.1+ 註冊可免升；否則升 9.0+"},
+          {"wbs": "2.2", "task": "ESX 主機升至支援版本", "manday": 2, "notes": "依主機數縮放"},
+          {"wbs": "2.3", "task": "NSX 前置確認", "manday": 1, "notes": "NSX 4.2+ 無 ELM 可沿用，convergence 後再升 9.1"},
+          {"wbs": "2.4", "task": "Aria Suite Lifecycle 修補（≥8.18 P2）/ Aria Operations 升 VCF Operations 9.x（若有）", "manday": 2, "notes": "Aria Automation 可另列 workstream"}
+        ]},
+        {"wbs": "3", "name": "Converge / Import 進 VCF", "tasks": [
+          {"wbs": "3.1", "task": "執行 VCF Installer Converge 或 VCF Operations Import 工作流", "manday": 4, "notes": "first-of-type，最複雜"},
+          {"wbs": "3.2", "task": "自動部署缺漏元件與設定（VCF Installer / Operations 帶出）", "manday": 2, "notes": ""},
+          {"wbs": "3.3", "task": "Converge / Import 後驗證", "manday": 1, "notes": ""}
+        ]},
+        {"wbs": "4", "name": "對齊升級至 VCF 9.1", "tasks": [
+          {"wbs": "4.1", "task": "元件依序升級至 9.1（含 NSX 升 9.1）", "manday": 3, "notes": ""},
+          {"wbs": "4.2", "task": "ESXi 主機 remediation", "manday": 2, "notes": "依主機數 / 變更窗口縮放"},
+          {"wbs": "4.3", "task": "整體驗證與納管", "manday": 2, "notes": "Supervisor/VKS/Cloud Director 來源若有，需額外評估"}
+        ]}
+      ]
+    }
+  ]
+}

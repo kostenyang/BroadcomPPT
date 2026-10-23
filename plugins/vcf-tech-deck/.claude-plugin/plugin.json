@@ -1,0 +1,16 @@
+{
+  "name": "vcf-tech-deck",
+  "version": "0.1.0",
+  "description": "Build Broadcom VCF 9.1 presentations from the official 150-slide General Overview Tech Deck. Covers general tech overview, deployment planning, customer pitch, and upgrade migration. Plum color scheme, bilingual (English title + Chinese subtitle).",
+  "author": {
+    "name": "Kosten Yang"
+  },
+  "keywords": [
+    "vcf",
+    "vmware-cloud-foundation",
+    "broadcom",
+    "presentation",
+    "pptx",
+    "vcf-9.1"
+  ]
+}
