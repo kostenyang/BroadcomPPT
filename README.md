@@ -18,8 +18,9 @@
 - `TECH_TUESDAY_Whats_New_with_vSphere_in_VCF_9_1.pptx` — VCF 9.1 vSphere「What's New」Tech Tuesday 範本 (29 slides)
 - `TECH_TUESDAY_Whats_New_with_vSAN_in_VCF_9_1.pptx` — VCF 9.1 vSAN「What's New」Tech Tuesday 範本 (30 slides，Plum 視覺、左圖右文 diagram-led，L300)
 - `VXD-VCF-910-PPT-v1_2-Taiwan.pptx` — VCF 9.1 Experience Day 工作坊 Master v1.2 台灣版 (144 slides，Sarah/OmniCorp 故事線 + Labs + Quiz，中文講者備註)
+- `VCF_9.1_Whats_New_Sales_09.30.26.pptx` — VCF 9.1 / 9.1.1 What's New Sales Overview (46 slides，2026/9 V 9.30.26：9.1.1 Updates + 9.1 GA 四大支柱，每頁 Customer Benefits + 英文 talk track)
 
-## Skill 套件（30 個 + 1 個 plugin）
+## Skill 套件（31 個 + 1 個 plugin）
 
 ### 基礎 / 分流
 
@@ -48,6 +49,7 @@
 | `vcf9-ebc-deck` | 同 `vcf-ebc`（別名） | — |
 | `vcf-summary` | VCF 9 概覽摘要 (24 slides) | 快速 overview、產品摘要、30 分鐘介紹版 |
 | `vcf9-summary` | 同 `vcf-summary`（別名） | — |
+| `vcf-911-whats-new` | VCF 9.1 / 9.1.1 What's New 業務版 (46 slides) | 9.1.1 更新簡報、版本新功能 Sales Overview、客戶 update briefing、依四大支柱挑功能頁 |
 | `vcf-whats-new` | VCF「What's New」/ 技術概覽 (L200–L300) | 新功能介紹、Tech Tuesday、feature deep-dive、DEMO session、vSAN/儲存新功能 |
 | `vcf-upgrade` | VCF 9.1 升級路徑 (APJ Upgrade Pathways 範本) | 5.2.1→9.1、vSphere→VCF、converge/import、IP/DNS 規劃 |
 | `vcf-91-ppt` | 同 `vcf-upgrade`（別名） | — |
@@ -93,6 +95,8 @@
 |------|------|
 | `scripts/clone-slide.py` | 從範本複製整頁、只換文字（`list` / `clone` / `settext` / `keep`）。一張官方內容頁 XML 約 293,000 字元、純文字只有約 950 —— 複製整頁是「照官方美術又不燒 token」的做法。 |
 | `scripts/gen-layout-map.py` | 產生版型對照表；範本換版時重跑 |
+| `scripts/clone-slide.py --shape` | 改「不是 placeholder」的文字方塊（Customer Benefits 面板、badge、封面講者/日期）：`list deck --slide N --shapes` 查 id，`--shape '6251=粗體開頭::內文\|…'` 沿用原框樣式與間距 |
+| `scripts/set-hant-font.py` | 把 theme 的繁中字型（Hant）改成微軟正黑體；theme 預設新細明體的 deck 產出後跑一次 |
 | `skills/vcf-whats-new/references/layout-map.md` | 兩份 Tech Tuesday 範本全部 268 個版型的 名稱 → 檔案 → master → 幾何 對照 |
 
 ## 目錄結構
@@ -101,12 +105,12 @@
 BroadcomPPT/
 ├── *.pptx                    # 官方範本 / 來源簡報
 ├── scripts/                  # clone-slide.py、gen-layout-map.py
-├── skills/                   # 30 個 Skill 原始檔 (SKILL.md + references/assets/scripts)
+├── skills/                   # 31 個 Skill 原始檔 (SKILL.md + references/assets/scripts)
 │   ├── vcf-base/  broadcom-ppt-base/  vcf-router/
 │   ├── vcf-semiconductor/  vcf-financial/  vcf-telecom/
 │   ├── vcf-hybrid-cloud/  vcf-ai/  vcf-edge/
 │   ├── vcf-ebc/  vcf9-ebc-deck/  vcf-summary/  vcf9-summary/
-│   ├── vcf-whats-new/  vcf-upgrade/  vcf-91-ppt/  vcf-automation/
+│   ├── vcf-911-whats-new/  vcf-whats-new/  vcf-upgrade/  vcf-91-ppt/  vcf-automation/
 │   ├── vcf-experience-day/  vcf-cxs/  cxs-success-stories/
 │   ├── vcf-project-status/  vcf-incident-report/
 │   ├── vcf-hex-cluster/  vcf-infographic-cards/  vcf-pillar-cards/
@@ -135,3 +139,4 @@ BroadcomPPT/
 - 「VCF 9 What's New / 新功能介紹 / Tech Tuesday」→ `vcf-whats-new`
 - 「專案一頁狀態報告 / 週報月報投影片 / RAG status」→ `vcf-project-status`
 - 「VCF 9.1 Experience Day / 體驗日工作坊 / 半天 Lab 場」→ `vcf-experience-day`
+- 「VCF 9.1.1 新功能 / 9.1.1 更新簡報 / What's New 業務版」→ `vcf-911-whats-new`

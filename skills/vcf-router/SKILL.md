@@ -56,6 +56,7 @@ description: VCF / Broadcom 交付物「分流總機」(router)。使用者的 s
 |---|---|
 | CIO / 高階主管、完整價值論述、EBC、whiteboard | `vcf-ebc`（52p） |
 | 30 分鐘快速介紹、概覽、入門 | `vcf-summary`（24p） |
+| 版本新功能、業務 / 客戶等級（9.1 GA + **9.1.1** What's New、Sales Overview、update briefing） | `vcf-911-whats-new` |
 | L200 新功能介紹 / What's New / Tech Tuesday | `vcf-whats-new` |
 | L300 技術 deep-dive（依主題見 Q2） | 主題 skill |
 | 大範圍技術總覽、要從官方 150 頁挑章節、Plum 配色雙語 | `vcf-tech-deck:vcf-tech-deck`（plugin） |
@@ -107,6 +108,7 @@ description: VCF / Broadcom 交付物「分流總機」(router)。使用者的 s
 |---|---|
 | `vcf-upgrade` | `APJ__Tech__Upgrade_Pathways_to_VCF_9_1-Slides.pptx`（固定） |
 | `vcf-whats-new` | `TECH_TUESDAY_Whats_New_with_vSphere_in_VCF_9_1.pptx`（固定） |
+| `vcf-911-whats-new` | `VCF_9.1_Whats_New_Sales_09.30.26.pptx`（46p，固定） |
 | `vcf-automation` | `Q3WOE021_-_VCF_9_1_Automation_Technical_Deep_Dive.pptx`（固定） |
 | `vcf-ebc` | `VCF9 - EBC and Customer Deck.pptx`（52p） |
 | `vcf-summary` | `VMware Cloud Foundation - VCF9 - Summary_Final.pptx`（24p） |
@@ -120,6 +122,7 @@ description: VCF / Broadcom 交付物「分流總機」(router)。使用者的 s
 ## 易混淆對照（quick reference）
 
 - 「新功能介紹」vs「升級規劃」：講**功能有什麼** → `vcf-whats-new`；講**怎麼升上去** → `vcf-upgrade`。
+- 「新功能」業務版 vs 技術版：提到 **9.1.1**、Sales Overview、給業務 / 客戶看版本差異與 Customer Benefits → `vcf-911-whats-new`；給工程師的 vSphere / vSAN 功能 L200–L300 deep-dive → `vcf-whats-new`。
 - 「概覽」vs「EBC」：時間短/入門 → `vcf-summary`；高階決策者/完整價值論述 → `vcf-ebc`。
 - 「甘特圖」vs「單頁狀態」：Excel 排程追蹤 → `wbs-gantt`；1 頁 PPT 匯報 → `vcf-project-status`。
 - 「估人天」vs「排時程」：只要工作量 → `manday-estimate`；要日期與進度 → `wbs-gantt`。

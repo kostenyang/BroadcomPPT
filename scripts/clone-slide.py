@@ -30,10 +30,16 @@
                               行首加 "1:" / "2:" 可指定縮排層級，例如 "1:子項目"
   --set 'body:17=文字內容'     直接指定 placeholder（type 或 type:idx），可重複
                               多行同樣用 | 分隔
+  --shape '6251=粗體::內文|…'  改「不是 placeholder」的文字方塊（Customer Benefits 面板、
+                              badge 膠囊、封面講者/日期）。id 先用 list --slide N --shapes 查。
+                              第 N 項套原框第 N 段的樣式（多出來的套最後一段），
+                              "粗體開頭::內文" 沿用該段的粗體/一般字樣式；原框項目之間的
+                              空白間距段會照樣補回。可重複
 
 限制（誠實說明）
 ----------------
-  * 只換 placeholder 裡的文字。頁面上的圖、示意圖裡的文字方塊不是 placeholder，不會被動到 ——
+  * 預設只換 placeholder 裡的文字（非 placeholder 文字方塊要用 --shape 明確指定 id）。
+    頁面上的圖、示意圖裡的文字方塊不是 placeholder，不會被動到 ——
     那正是你要的：美術原封不動。**但也代表圖不會跟著你的新標題改**，所以要挑一張
     「圖已經對」的頁來複製，不要拿壓縮示意圖的頁去講授權。
   * **不支援 markdown**。寫 `**粗體**` 會原樣印出兩個星號。
@@ -185,6 +191,118 @@ class Deck:
                 anchor.addprevious(p_el)
         return True
 
+    @staticmethod
+    def text_shapes(slide_xml):
+        """非 placeholder 的文字方塊：回傳 [(id, name, sp_element, 目前文字)]。
+
+        含 group 裡的。用來改 "Customer Benefits" 面板、badge 膠囊、封面講者/日期這類
+        不是 placeholder 的文字（list --slide 會列出 shape:<id>）。
+        """
+        out = []
+        for sp in slide_xml.iter(q(P, "sp")):
+            if sp.find(".//" + q(P, "ph")) is not None:
+                continue
+            tx = sp.find(q(P, "txBody"))
+            if tx is None:
+                continue
+            txt = " ".join((e.text or "") for e in tx.iter(q(A, "t"))).strip()
+            if not txt:
+                continue
+            nv = sp.find(".//" + q(P, "cNvPr"))
+            out.append((nv.get("id"), nv.get("name"), sp, txt))
+        return out
+
+    @staticmethod
+    def set_rich_text(sp, items):
+        """改非 placeholder 文字方塊，保留原本的段落樣式與「粗體開頭 + 內文」格式。
+
+        items: ["粗體開頭::其餘內文", "只有一段文字", ...]，每個 item 一個段落
+          * 第 N 項沿用原框第 N 個內容段落的樣式（pPr / 粗體 rPr / 一般 rPr / 換行），
+            項目比原段落多時沿用最後一段 —— 所以「標題段 + 內文段」的框（pillar 頁）
+            傳 "標題|內文" 就會各自套對字級顏色；每段格式相同的框（Customer Benefits）
+            傳幾項都行，第 2 項起的 spcBef 間距也會跟著原框
+          * 有 "::" → 前半用該段的粗體 rPr、後半用一般 rPr；原段若是「粗體 <br> 內文」
+            就用換行接內文
+          * 沒有 "::" → 用該段的一般 rPr；該段只有粗體字（badge、標題段）就用粗體
+        原框若在內容段落之間夾空白段（間距用），照原樣在每項之間補回。
+        """
+        tx = sp.find(q(P, "txBody"))
+        if tx is None:
+            return False
+        paras = tx.findall(q(A, "p"))
+        content = [p for p in paras if p.find(q(A, "r")) is not None]
+        if not content:
+            return False
+        first_i = paras.index(content[0])
+        lead_blank = first_i > 0 and paras[0].find(q(A, "r")) is None
+        between = None
+        if len(content) > 1:
+            gap = paras[first_i + 1:paras.index(content[1])]
+            between = gap[0] if gap else None
+        elif first_i + 1 < len(paras) and paras[first_i + 1].find(q(A, "r")) is None:
+            between = paras[first_i + 1]
+        blank_proto = paras[0] if lead_blank else between
+
+        def style_of(src):
+            rprs = [r.find(q(A, "rPr")) for r in src.findall(q(A, "r"))]
+            bold = next((x for x in rprs if x is not None and x.get("b") == "1"), None)
+            plain = next((x for x in rprs if x is None or x.get("b") != "1"), None)
+            only_bold = plain is None and bold is not None
+            if only_bold:
+                plain = bold
+            if bold is None:
+                bold = copy.deepcopy(plain) if plain is not None else etree.Element(q(A, "rPr"))
+                bold.set("b", "1")
+            return {
+                "pPr": src.find(q(A, "pPr")),
+                "bold": bold,
+                "plain": plain,
+                "only_bold": only_bold,
+                "br": src.find(q(A, "br")),
+                "end": src.find(q(A, "endParaRPr")),
+            }
+
+        styles = [style_of(p) for p in content]
+
+        def run(text, rpr):
+            r_el = etree.Element(q(A, "r"))
+            if rpr is not None:
+                r_el.append(copy.deepcopy(rpr))
+            t_el = etree.SubElement(r_el, q(A, "t"))
+            t_el.text = text
+            return r_el
+
+        new = []
+        if lead_blank:
+            new.append(copy.deepcopy(paras[0]))
+        for i, item in enumerate(items):
+            if i and between is not None:
+                new.append(copy.deepcopy(blank_proto))
+            st = styles[min(i, len(styles) - 1)]
+            p_el = etree.Element(q(A, "p"))
+            if st["pPr"] is not None:
+                p_el.append(copy.deepcopy(st["pPr"]))
+            lead, sep, rest = item.partition("::")
+            if sep:
+                p_el.append(run(lead.strip(), st["bold"]))
+                if rest.strip():
+                    if st["br"] is not None:
+                        p_el.append(copy.deepcopy(st["br"]))
+                        p_el.append(run(rest.strip(), st["plain"]))
+                    else:
+                        p_el.append(run(" " + rest.strip(), st["plain"]))
+            else:
+                p_el.append(run(item.strip(), st["plain"]))
+            if st["end"] is not None:
+                p_el.append(copy.deepcopy(st["end"]))
+            new.append(p_el)
+
+        for p_el in paras:
+            tx.remove(p_el)
+        for p_el in new:
+            tx.append(p_el)
+        return True
+
     # ---------- mutations ----------
     def clone(self, src_part, at=None):
         """複製一張投影片到簡報裡，回傳新 part 名稱。"""
@@ -313,6 +431,23 @@ def apply_text(deck, part, args):
         k, _, v = s.partition("=")
         todo.append((k.strip(), v))
 
+    shapes = deck.text_shapes(sx) if getattr(args, "shape", None) else []
+    bad_shapes = []
+    for s in getattr(args, "shape", None) or []:
+        k, _, v = s.partition("=")
+        k = k.strip()
+        k = k[6:] if k.startswith("shape:") else k
+        hit = [sp for sid, name, sp, _ in shapes if k in (sid, name)]
+        if not hit:
+            bad_shapes.append(k)
+            continue
+        deck.set_rich_text(hit[0], [x for x in v.split("|") if x.strip()])
+    if bad_shapes:
+        sys.stderr.write(
+            "略過（這一頁找不到這些文字方塊）：%s\n  可用：" % ", ".join(bad_shapes)
+            + ", ".join("shape:%s" % sid for sid, _, _, _ in shapes) + "\n"
+        )
+
     missing = []
     for key, val in todo:
         hit = [sp for k, sp, _ in phs if k == key or k.split(":")[0] == key]
@@ -342,6 +477,10 @@ def cmd_list(args):
         print("slide %d  版型: %s  (%s)" % (args.slide, ln, lf))
         for k, _, txt in d.placeholders(d.xml(part)):
             print("  %-12s %s" % (k, (txt[:90] + "…") if len(txt) > 90 else txt))
+        if args.shapes:
+            for sid, _, _, txt in d.text_shapes(d.xml(part)):
+                k = "shape:%s" % sid
+                print("  %-12s %s" % (k, (txt[:90] + "…") if len(txt) > 90 else txt))
         return
     for i, (_, _, part) in enumerate(order, 1):
         lf, ln = d.layout_of(part)
@@ -401,10 +540,15 @@ def main():
         p.add_argument("--bullets", help='用 | 分行，行首 "1:" 指定縮排層級')
         p.add_argument("--set", action="append",
                        help="placeholder=文字，例如 'body:17=第一行|第二行'")
+        p.add_argument("--shape", action="append",
+                       help="非 placeholder 文字方塊（id 用 list --slide N --shapes 查）："
+                            "'6251=粗體開頭::內文|粗體開頭::內文'")
 
     p = sub.add_parser("list", help="列出投影片 / 單頁的可填欄位")
     p.add_argument("pptx")
     p.add_argument("--slide", type=int)
+    p.add_argument("--shapes", action="store_true",
+                   help="配合 --slide：一併列出非 placeholder 的文字方塊（shape:<id>）")
     p.set_defaults(func=cmd_list)
 
     p = sub.add_parser("clone", help="複製一頁並換文字")
