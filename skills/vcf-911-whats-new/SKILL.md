@@ -9,7 +9,8 @@ Read `vcf-base` SKILL.md first for colors, fonts, the clone-slide workflow and �
 
 > **⚡ 底版**：`VCF_9.1_Whats_New_Sales_09.30.26.pptx`（46 slides，16.9MB，Broadcom VCF Division，September 2026 · V 9.30.26）
 > Download: `https://raw.githubusercontent.com/kostenyang/BroadcomPPT/main/VCF_9.1_Whats_New_Sales_09.30.26.pptx`
-> 每頁可改欄位與 shape id：repo 內 `skills/vcf-911-whats-new/references/slide-map.md`（或 `scripts/clone-slide.py list <deck> --slide N --shapes` 重產）
+> 工具：`https://raw.githubusercontent.com/kostenyang/BroadcomPPT/main/scripts/clone-slide.py`、`.../scripts/set-hant-font.py`
+> 每頁可改欄位與 shape id：`https://raw.githubusercontent.com/kostenyang/BroadcomPPT/main/skills/vcf-911-whats-new/references/slide-map.md`（或 `scripts/clone-slide.py list <deck> --slide N --shapes` 重產）
 
 **Guardrail**：產出任何簡報前，先問「這次範圍是否包含 NSX Edge cluster（Edge nodes / T0-T1 gateway）」，確認後才動手。答案會影響 EVPN 兩頁的講法：slide 10（9.1.1 EVPN：Transit Gateway 直連 leaf switch）與 slide 42（9.1 EVPN Unified Fabric，原文寫 "reducing reliance on NSX Edge"）。客戶有 Edge cluster 時，42 的這句話要講成演進選項，不要講成取代；細節先查 TechDocs 再寫。
 
