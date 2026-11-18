@@ -50,6 +50,7 @@
 | `vcf-summary` | VCF 9 概覽摘要 (24 slides) | 快速 overview、產品摘要、30 分鐘介紹版 |
 | `vcf9-summary` | 同 `vcf-summary`（別名） | — |
 | `vcf-911-whats-new` | VCF 9.1 / 9.1.1 What's New 業務版 (46 slides) | 9.1.1 更新簡報、版本新功能 Sales Overview、客戶 update briefing、依四大支柱挑功能頁 |
+| `vcf-whats-new-911` | VCF 9.1.1 What's New 技術版 (Tech Tuesday / SRC 50 slides；70 頁全端版需自備) | 9.1.1 技術 enablement、NSX DTGW-EVPN、Fleet Management (密碼/憑證/組態/Identity)、Argo CD、DSM、Private AI |
 | `vcf-whats-new` | VCF「What's New」/ 技術概覽 (L200–L300) | 新功能介紹、Tech Tuesday、feature deep-dive、DEMO session、vSAN/儲存新功能 |
 | `vcf-upgrade` | VCF 9.1 升級路徑 (APJ Upgrade Pathways 範本) | 5.2.1→9.1、vSphere→VCF、converge/import、IP/DNS 規劃 |
 | `vcf-91-ppt` | 同 `vcf-upgrade`（別名） | — |
@@ -110,7 +111,7 @@ BroadcomPPT/
 │   ├── vcf-semiconductor/  vcf-financial/  vcf-telecom/
 │   ├── vcf-hybrid-cloud/  vcf-ai/  vcf-edge/
 │   ├── vcf-ebc/  vcf9-ebc-deck/  vcf-summary/  vcf9-summary/
-│   ├── vcf-911-whats-new/  vcf-whats-new/  vcf-upgrade/  vcf-91-ppt/  vcf-automation/
+│   ├── vcf-911-whats-new/  vcf-whats-new-911/  vcf-whats-new/  vcf-upgrade/  vcf-91-ppt/  vcf-automation/
 │   ├── vcf-experience-day/  vcf-cxs/  cxs-success-stories/
 │   ├── vcf-project-status/  vcf-incident-report/
 │   ├── vcf-hex-cluster/  vcf-infographic-cards/  vcf-pillar-cards/
@@ -140,3 +141,4 @@ BroadcomPPT/
 - 「專案一頁狀態報告 / 週報月報投影片 / RAG status」→ `vcf-project-status`
 - 「VCF 9.1 Experience Day / 體驗日工作坊 / 半天 Lab 場」→ `vcf-experience-day`
 - 「VCF 9.1.1 新功能 / 9.1.1 更新簡報 / What's New 業務版」→ `vcf-911-whats-new`
+- 「VCF 9.1.1 技術簡報 / Tech Tuesday 9.1.1 / SRC 場次 / Fleet Management 版」→ `vcf-whats-new-911`
